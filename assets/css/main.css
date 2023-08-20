@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-roboto);
+}
+
+body {
+  background-color: var(--white);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+:root {
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
+
+  --white: #fff;
+  --text-clr: #272727;
+  --icon-clr: #666666;
+  --card-clr: #f8f9fa;
+  --card-hover: #f4f5f6;
+  --card-hover-2: #f4f5f6;
+  --btn-hover: #cccccc;
+  --primary-clr: #2ca4ab;
+}
+
+@font-face {
+  font-family: "Al Qalam";
+  src: url("/assets/fonts/Al_Qalam_Quran.ttf"); /* IE9 Compat Modes */
+  src: url("/assets/fonts/Al_Qalam_Quran.ttf?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/Al_Qalam_Quran.ttf") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/Al_Qalam_Quran.ttf")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("/assets/fonts/Al_Qalam_Quran.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("/assets/fonts/Al_Qalam_Quran.ttf#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Hafs";
+  src: url("/assets/fonts/Hafs.ttf"); /* IE9 Compat Modes */
+  src: url("/assets/fonts/Hafs.ttf?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/Hafs.ttf") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/Hafs.ttf") format("woff"),
+    /* Pretty Modern Browsers */ url("/assets/fonts/Hafs.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("/assets/fonts/Hafs.ttf#svgFontName")
+      format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Quran Sura";
+  src: url("/assets/fonts/Quran_Sura.otf"); /* IE9 Compat Modes */
+  src: url("/assets/fonts/Quran_Sura.otf") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/Quran_Sura.otf") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/Quran_Sura.otf")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("/assets/fonts/Quran_Sura.otf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("/assets/fonts/Quran_Sura.otf#svgFontName")
+      format("svg"); /* Legacy iOS */
+}
+
+/* header */
+.header {
+  height: 10vh;
+  background-color: var(--white);
+  width: 100%;
+  padding: 1.5rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+
+.menu-btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-right: 0.5rem;
+}
+
+.menu-icon {
+  font-size: 1.6rem;
+}
+
+.logo img {
+  width: 105px;
+}
+/* hero */
+.reciter__hero {
+  height: 52vh;
+  position: relative;
+  background-color: var(--primary-clr);
+}
+
+.has-bg {
+  background: url("/assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reciter__hero-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 45em;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reciter__hero-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+  font-family: var(--ff-poppins);
+}
+
+.reciter__hero-input {
+  width: 100%;
+  padding-top: 1rem;
+  position: relative;
+}
+
+.input__reciter-search {
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 2.5em;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.5em;
+  top: 45%;
+  color: var(--icon-clr);
+}
+
+/* reciters list */
+.reciters__main {
+  margin: 2rem 0;
+}
+
+.reciter__list {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.column-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.column-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.column-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.reciter__card {
+  background-color: var(--card-clr);
+  border-radius: 7px;
+  /* width: 15rem; */
+  overflow: hidden;
+}
+
+.reciter__image {
+  width: 100%;
+  height: 25vh;
+}
+
+.reciter__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.reciter__info {
+  padding: 1rem;
+}
+
+.reciter__name {
+  margin-bottom: 0.3rem;
+}
+
+.recite__type {
+  opacity: 0.7;
+}
+
+/* media queries */
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 1.2rem;
+  }
+
+  .reciter__list {
+    max-width: 90%;
+  }
+}

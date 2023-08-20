@@ -1,0 +1,359 @@
+:root {
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
+
+  --white: #fff;
+  --text-clr: #272727;
+  --icon-clr: #666666;
+  --card-clr: #f8f9fa;
+  --card-hover: #f4f5f6;
+  --card-hover-2: #f4f5f6;
+  --btn-hvoer: #cccccc;
+  --primary-clr: #2ca4ab;
+  --input-range: #d2d6d9;
+  --black: #000000;
+}
+
+.reciter__details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-left: 0;
+}
+
+.reciter__details .reciter__image {
+  width: 11rem;
+  height: 11rem;
+  margin-right: 2rem;
+}
+
+.reciter__details .reciter__image img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reciter__hero .reciter__name {
+  font-family: var(--ff-poppins);
+  font-size: 1.3rem;
+  color: var(--white);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.reciter__info-text p {
+  color: var(--white);
+  line-height: 1.5;
+}
+
+/* chapter */
+.chapter__input {
+  position: relative;
+}
+
+.input__search-chapter {
+  width: 100%;
+  padding: 0.7rem;
+  padding-left: 2.5em;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chapter__input .search-icon {
+  position: absolute;
+  left: 0.5em;
+  top: 18%;
+  color: var(--icon-clr);
+}
+
+.chapter__main {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+
+.chapter__list {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.chapter__card {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* width: 25rem; */
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  color: var(--text-clr);
+}
+
+.chapter__card:hover {
+  background-color: var(--card-hover-2);
+}
+
+.chapter__card:hover .play-icon {
+  color: var(--primary-clr);
+}
+
+.chapter__left {
+  display: flex;
+}
+
+.play-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: var(--card-hover);
+  display: grid;
+  place-content: center;
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.chapter__num,
+.chapter__name {
+  font-weight: 500;
+}
+
+.chapter__card .ar__name {
+  font-family: "Quran Sura", sans-serif;
+  font-size: 1.4rem;
+}
+
+.chapter__righ-btns {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.link-copy-btn,
+.chapter-download-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  /* width: 2rem;
+  height: 2rem; */
+  border-radius: 50%;
+  display: grid;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.chapter-download-btn span {
+  font-weight: 100;
+}
+
+.link-copy-btn:hover,
+.chapter-download-btn:hover {
+  background-color: var(--btn-hvoer);
+}
+
+.link-copy-btn {
+  display: none;
+}
+
+button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* audio player */
+.audio__player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  display: none;
+}
+
+.audio__player.show {
+  display: block;
+}
+
+.audio__range {
+  position: relative;
+}
+
+.input__audio-range {
+  width: 100%;
+  height: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--input-range);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* (Chrome, Opera, Edge) and other browsers */
+.input__audio-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: var(--black);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.input__audio-range::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.input__audio-range:active::-webkit-slider-thumb {
+  background-color: var(--icon-clr);
+}
+
+/* (Firefox) */
+.input__audio-range::-moz-range-progress {
+  background-color: var(--input-range);
+}
+
+.input__audio-range::-moz-range-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: var(--black);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.input__audio-range::-moz-range-thumb:hover {
+  transform: scale(1.1);
+}
+
+.input__audio-range:active::-moz-range-thumb {
+  background-color: var(--accent);
+}
+
+.audio__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0.8rem; */
+  padding: 0.4rem 0.8rem;
+}
+
+.audio__start-time,
+.audio__end-time {
+  opacity: 0.5;
+  font-weight: 500;
+}
+
+.master__play-btn {
+  border-radius: 50%;
+  display: grid;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.master__play-btn:hover {
+  background-color: var(--btn-hvoer);
+}
+
+.master__play-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.master-pause-icon {
+  display: none;
+}
+
+.master__play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 5px solid var(--primary-clr);
+  border-top: 5px solid transparent;
+  display: none;
+}
+
+.master__play-btn.loading::after {
+  display: block;
+  animation: loading 0.75s linear infinite;
+}
+
+.master__play-btn.loading svg {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.master__play-btn.loading {
+  pointer-events: none;
+}
+
+.master__play-btn.playing .master-play-icon {
+  display: none;
+}
+
+.master__play-btn.playing .master-pause-icon {
+  display: grid;
+}
+
+@keyframes loading {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* media queries */
+@media screen and (max-width: 1024px) {
+  .reciter__details,
+  .chapter__main {
+    max-width: 96%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+
+  .reciter__details {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .reciter__details .reciter__name {
+    text-align: center;
+  }
+
+  .chapter__list {
+    grid-template-columns: 1fr;
+  }
+}
